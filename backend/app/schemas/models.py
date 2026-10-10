@@ -92,7 +92,7 @@ class AgentDecision(BaseModel):
     returns something invalid, the gateway returns NO_RECOMMENDATION.
     """
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", protected_namespaces=())
 
     recommendation: Recommendation
     confidence_score: float = Field(ge=0, le=1)
@@ -177,7 +177,7 @@ class AgentReasoning(BaseModel):
 
 
 class KillSwitchRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", protected_namespaces=())
     enabled: bool
     reason: str = Field(min_length=3, max_length=300)
     actor: str = Field(default="ops-user", min_length=1, max_length=64)
