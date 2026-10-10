@@ -60,3 +60,4 @@ Desktop.ini
 
 # Local test outputs
 test-results/
+.env
