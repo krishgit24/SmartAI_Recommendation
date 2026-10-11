@@ -61,3 +61,8 @@ Desktop.ini
 # Local test outputs
 test-results/
 .env
+
+# Local SQLite database
+smart_recommendation.db
+smart_recommendation.db-shm
+smart_recommendation.db-wal
